@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=gmap
+Exec=/home/rey/.scripts/gmap
+Type=Application
+Terminal=false
+Icon=utilities-terminal

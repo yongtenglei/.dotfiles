@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=bilibili
+Exec=/home/rey/.scripts/bilibili
+Type=Application
+Terminal=false
+Icon=utilities-terminal

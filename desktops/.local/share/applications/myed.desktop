@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=myed
+Exec=/home/rey/.scripts/myed
+Type=Application
+Terminal=false
+Icon=utilities-terminal

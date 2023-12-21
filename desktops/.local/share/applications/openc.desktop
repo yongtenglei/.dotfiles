@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=openc
+Exec=/home/rey/.scripts/openc
+Type=Application
+Terminal=false
+Icon=utilities-terminal

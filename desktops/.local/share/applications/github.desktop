@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=github
+Exec=/home/rey/.scripts/github
+Type=Application
+Terminal=false
+Icon=utilities-terminal

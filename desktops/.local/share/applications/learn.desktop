@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=learn
+Exec=/home/rey/.scripts/learn
+Type=Application
+Terminal=false
+Icon=utilities-terminal

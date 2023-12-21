@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=youtube
+Exec=/home/rey/.scripts/youtube
+Type=Application
+Terminal=false
+Icon=utilities-terminal
