@@ -1,5 +1,19 @@
 # Rey's dotfiles
 
+## Basic Usage
+
+Manage a module:
+
+```bash
+stow <module_name>
+```
+
+Delete a module:
+
+```bash
+stow -D <module_name>
+```
+
 ## Zsh Config
 
 ```bash
@@ -24,6 +38,12 @@ Exec=/home/<username>/.scripts/youtube
 Type=Application
 Terminal=false
 Icon=utilities-terminal
+```
+
+⚠️ Make sure your scripts have proper permission (especially the execution permission)
+
+```bash
+chmod +x <scripts_name>
 ```
 
 And then, update your desktop database by
