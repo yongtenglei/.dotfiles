@@ -3,8 +3,8 @@ alias vim="nvim"
 alias vid="neovide"
 alias c="clear"
 alias new="mkdir"
-alias ls="exa"
-alias lsa="exa -abghHliS"
+alias ls="eza --color=always --git --icons=always"
+alias ll="eza --color=always --long --git --icons=always"
 alias sudo="sudo "
 
 # For Mac latex settings

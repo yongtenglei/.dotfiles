@@ -7,6 +7,9 @@ autopair-init
 # mac extension
 source ~/.config/zsh/mac/open.zsh
 
+# useful tools
+source ~/.config/zsh/tools.zsh
+
 ### RANDOM COLOR SCRIPT
 #/opt/shell-color-scripts/colorscripts/00default.sh
 ### RANDOM COLOR SCRIPT ###
