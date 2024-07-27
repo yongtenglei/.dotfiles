@@ -73,18 +73,23 @@ yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.9
 
 # disable specific apps
-yabai -m rule --add app="^iStat*" sticky=on layer=above manage=off border=off
-yabai -m rule --add app="^System Preferences*" manage=off layer=above
-yabai -m rule --add app="^System Settings$" manage=off layer=above
-yabai -m rule --add app="^Calculator$" manage=off layer=above
-yabai -m rule --add app="^WeChat$" manage=off
-yabai -m rule --add app="^QQ$" manage=off
+# yabai -m rule --add app="^iStat*" sticky=on layer=above manage=off border=off
+# yabai -m rule --add app="^System Preferences*" manage=off layer=above
+# yabai -m rule --add app="^System Settings$" manage=off layer=above
+# yabai -m rule --add app="^Calculator$" manage=off layer=above
+# yabai -m rule --add app="^WeChat$" manage=off
+# yabai -m rule --add app="^QQ$" manage=off
 
 #########
 # Do not lose my focus when quit a window
 #########
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+
+#########
+# Scratchpad
+#########
+yabai -m rule --add app="^WeChat$" scratchpad=wechat grid=11:11:1:1:9:9
 
 #########
 # Integration with sketchybar 

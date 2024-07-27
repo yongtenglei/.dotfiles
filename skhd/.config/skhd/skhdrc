@@ -71,6 +71,10 @@ ctrl + alt - r : yabai --restart-service
 # quit
 alt - q : yabai -m window --close
 
+# scratchpad
+alt - w : yabai -m window --toggle wechat || open  -a WeChat
+cmd + alt - w : yabai -m window --scratchpad recover
+
 ###### monitor
 #change focus between external displays (left and right)
 alt - x: yabai -m display --focus west
