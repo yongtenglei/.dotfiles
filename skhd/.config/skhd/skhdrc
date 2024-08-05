@@ -73,6 +73,8 @@ alt - q : yabai -m window --close
 
 # scratchpad
 alt - w : yabai -m window --toggle wechat || open  -a WeChat
+alt - s : yabai -m window --toggle whatsapp || open  -a WhatsApp
+alt - m : yabai -m window --toggle chatgpt || open  -a ChatGPT
 cmd + alt - w : yabai -m window --scratchpad recover
 
 ###### monitor
