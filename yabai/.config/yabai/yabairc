@@ -92,6 +92,7 @@ yabai -m signal --add event=application_terminated action="yabai -m query --wind
 yabai -m rule --add app="^WeChat$" scratchpad=wechat grid=11:11:1:1:9:9
 yabai -m rule --add app="WhatsApp" scratchpad=whatsapp grid=11:11:1:1:9:9
 yabai -m rule --add app="ChatGPT" scratchpad=chatgpt grid=11:11:1:1:9:9
+yabai -m rule --add app="DeepL" scratchpad=deepl grid=11:11:1:1:9:9
 
 #########
 # Integration with sketchybar 
