@@ -1,19 +1,69 @@
+# Install tools
+# brew install fzf fd bat git-delta eza thefuck zoxide
+# sudo apt-get install fd-find bat git-delta eza thefuck zoxide
+
+
+#
+# Modules
+#
+
+# Sets sane Zsh built-in environment options.
 zmodule environment
-zmodule git
+# Applies correct bindkeys for input events.
 zmodule input
-zmodule termtitle
+# Utility aliases and functions. Adds colour to ls, grep and less.
 zmodule utility
-zmodule completion
-zmodule git-info
-zmodule zsh-users/zsh-completions
-zmodule zsh-users/zsh-autosuggestions
-zmodule zdharma/fast-syntax-highlighting
-zmodule zsh-users/zsh-history-substring-search
-zmodule supercrabtree/k
-zmodule hlissner/zsh-autopair
-zmodule pabloariasal/zfm
-zmodule agkozak/zsh-z
-zmodule Aloxaf/fzf-tab
+
+
+# Tools
+# ls lists directories first (applies to all aliases below).
+# ll lists with long format and git status (applies to all aliases below).
+# l lists all files.
+# lr lists recursively as a tree.
+# lx lists sorted by extension.
+# lk lists sorted by largest file size last.
+# lt lists sorted by newest modification time last.
+# lc lists sorted by newest status change (ctime) last.
+zmodule exa
+
+# fzf
+zmodule fzf
+
+# zoxide
+zmodule kiesman99/zim-zoxide
+
+
+#
+# Prompt
+#
+
+# Exposes to prompts how long the last command took to execute, used by asciiship.
 zmodule duration-info
+# Exposes git repository status information to prompts, used by asciiship.
+zmodule git-info
+# Formats the current working directory to be used by prompts.
 zmodule prompt-pwd
+
+#
+# Completion
+#
+
+# Additional completion definitions for Zsh.
+zmodule zsh-users/zsh-completions --fpath src
+# Enables and configures smart and extensive tab completion.
+# completion must be sourced after all modules that add completion definitions.
+zmodule completion
+
+#
+# Modules that must be initialized last
+#
+
+# Fish-like syntax highlighting for Zsh.
+# zsh-users/zsh-syntax-highlighting must be sourced after completion
+zmodule zsh-users/zsh-syntax-highlighting
+# Fish-like autosuggestions for Zsh.
+zmodule zsh-users/zsh-autosuggestions
+
+
+# theme
 zmodule gitster

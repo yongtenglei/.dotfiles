@@ -1,16 +1,51 @@
 source ~/.config/zsh/plugins.zsh
 source ~/.config/zsh/env.zsh
 source ~/.config/zsh/aliaes.zsh
-source ~/.zim/modules/fzf-tab/fzf-tab.plugin.zsh
-autopair-init
-
-# mac extension
-source ~/.config/zsh/mac/open.zsh
-
-# useful tools
-source ~/.config/zsh/tools.zsh
 
 ### RANDOM COLOR SCRIPT
 #/opt/shell-color-scripts/colorscripts/00default.sh
 ### RANDOM COLOR SCRIPT ###
 #colorscript random
+
+if [[ -n $SSH_CONNECTION ]]; then
+  if command -v nvim &> /dev/null; then
+    export EDITOR="nvim"
+  else
+    export EDITOR="vim"
+  fi
+else
+  export EDITOR="nvim"
+fi
+
+function edit-command-line-inplace() {
+  if [[ $CONTEXT != start ]]; then
+    if (( ! ${+widgets[edit-command-line]} )); then
+      autoload -Uz edit-command-line
+      zle -N edit-command-line
+    fi
+    zle edit-command-line
+    return
+  fi
+  () {
+    emulate -L zsh -o nomultibyte
+    local editor=("${(@Q)${(z)${VISUAL:-${EDITOR:-vi}}}}")
+    case $editor in
+      (*vim*)
+        "${(@)editor}" -c "normal! $(($#LBUFFER + 1))go" -- $1
+      ;;
+      (*emacs*)
+        local lines=("${(@f)LBUFFER}")
+        "${(@)editor}" +${#lines}:$((${#lines[-1]} + 1)) $1
+      ;;
+      (*)
+        "${(@)editor}" $1
+      ;;
+    esac
+    BUFFER=$(<$1)
+    CURSOR=$#BUFFER
+  } =(<<<"$BUFFER") </dev/tty
+}
+
+bindkey -v
+zle -N edit-command-line-inplace
+bindkey -M vicmd v edit-command-line-inplace
