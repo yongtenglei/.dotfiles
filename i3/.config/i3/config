@@ -45,6 +45,8 @@ bindsym $mod+Shift+s exec flameshot gui
 # Wallpaper
 # https://www.gnu.org/graphics/techy-gnu-tux-bivouac.html
 exec --no-startup-id feh --bg-scale ~/.config/i3/techy-gnu-tux-bivouac.jpg
+# Capslock to Ctrl
+exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 # Clash
 exec --no-startup-id ~/.clash.sh
@@ -66,8 +68,8 @@ tiling_drag modifier titlebar
 # monitor
 exec --no-startup-id xrandr --output HDMI-1 --mode 3840x2160
 
-# redshift
-exec --no-startup-id redshift
+# redshift (Shangehai)
+exec --no-startup-id redshift -l 31.2304:121.4737 -t 5500K:3500K
 
 # browser
 bindsym $mod+b exec firefox
