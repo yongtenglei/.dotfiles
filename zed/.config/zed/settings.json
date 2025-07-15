@@ -1,5 +1,5 @@
 {
-  "icon_theme": "Catppuccin Macchiato",
+  "icon_theme": "Catppuccin Mocha",
   "vim_mode": true,
   "telemetry": {
     "diagnostics": false,
@@ -9,7 +9,7 @@
   "buffer_font_size": 14,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Macchiato",
+    "light": "Catppuccin Mocha",
     "dark": "One Dark"
   },
   "active_pane_modifiers": {
@@ -112,7 +112,6 @@
     "enable_preview_from_file_finder": true,
     "enable_preview_from_code_navigation": true
   },
-
   "preferred_line_length": 120,
   "remove_trailing_whitespace_on_save": true,
   "use_smartcase_search": true,
@@ -176,5 +175,33 @@
       "show": "always"
     },
     "hide_root": false
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["basedpyright", "!pyright", "ruff"]
+    }
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright": {
+          "disableOrganizeImports": true,
+          "typeCheckingMode": "off",
+          "analysis": {
+            "autoSearchPaths": true,
+            "autoImportCompletions": true,
+            "useLibraryCodeForTypes": false,
+            "diagnosticMode": "openFilesOnly",
+            "inlayHints": {
+              "variableTypes": true,
+              "callArgumentNames": true,
+              "functionReturnTypes": true,
+              "genericTypes": false
+            }
+          }
+        }
+      }
+    }
   }
 }
+
