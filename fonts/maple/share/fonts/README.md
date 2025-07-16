@@ -1,4 +1,4 @@
-# Maple-Mono-Font(+ss07;+ss08;+zero;+ss11;+calt)
+# Maple-Mono-Font(+ss07;+ss08;+zero;+cv61;+ss11;+calt;)
 
 Built from [maple-font](https://github.com/subframe7536/maple-font).
 
@@ -31,7 +31,7 @@ Built from [maple-font](https://github.com/subframe7536/maple-font).
     "cv39": "ignore",
     "cv40": "ignore",
     "cv41": "ignore",
-    "cv61": "ignore",
+    "cv61": "enable",
     "cv62": "ignore",
     "cv63": "ignore",
     "cv64": "ignore",
@@ -79,7 +79,7 @@ Built from [maple-font](https://github.com/subframe7536/maple-font).
 ## building args
 
 ```bash
---cn --no-hinted --feat ss07,ss08,ss11,zero
+--cn --no-hinted --feat ss07,ss08,ss11,zero,cv61
 ```
 
 ## Usage
