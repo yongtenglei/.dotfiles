@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  launch_script="$HOME/.qutebrowser/launch_qutebrowser.sh" # macOS path
+else
+  launch_script="$HOME/.config/qutebrowser/launch_qutebrowser.sh" # Linux path
+fi
+
+if [[ -f "$launch_script" ]]; then
+  exec "$launch_script" "$@"
+else
+  echo "Error: Launch script not found at $launch_script"
+  exit 1
+fi

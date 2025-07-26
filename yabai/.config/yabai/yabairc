@@ -95,7 +95,7 @@ yabai -m rule --add app="ChatGPT" scratchpad=chatgpt grid=11:11:1:1:9:9
 yabai -m rule --add app="DeepL" scratchpad=deepl grid=11:11:1:1:9:9
 
 #########
-# Integration with sketchybar 
+# Integration with sketchybar
 #########
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
@@ -103,3 +103,9 @@ yabai -m signal --add event=window_destroyed action="sketchybar --trigger window
 
 # bar_hight:45 top_gap:12 external_bar_height=45-12=33
 yabai -m config external_bar all:33:0
+
+
+#########
+# Extra rules
+#########
+yabai -m rule --add app="^Python$" title=".* - qutebrowser$" role="AXWindow" subrole="AXDialog" manage=on
