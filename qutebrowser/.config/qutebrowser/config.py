@@ -57,10 +57,18 @@ TOKYO_NIGHT = {
     "bright_white": "#c0caf5",
 }
 
+IVORY_CREAM = "#fff8e6"
+PEARL_WHITE = "#f8f8f8"
+
 # ===== Core Settings =====
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.enabled = False
 c.colors.webpage.darkmode.algorithm = "lightness-cielab"
-c.colors.webpage.bg = TOKYO_NIGHT["background"]
+
+if c.colors.webpage.preferred_color_scheme == "dark":
+    c.colors.webpage.bg = TOKYO_NIGHT["background"]
+else:
+    # c.colors.webpage.bg = IVORY_CREAM
+    c.colors.webpage.bg = PEARL_WHITE
 
 # ===== Tab Bar =====
 c.colors.tabs.bar.bg = TOKYO_NIGHT["black"]
@@ -116,7 +124,7 @@ c.fonts.default_size = "10pt"
 # ===== Webkit Preferences =====
 settings = {
     "webkit": {
-        "prefers-color-scheme": "dark",
+        "prefers-color-scheme": "light",
     }
 }
 
